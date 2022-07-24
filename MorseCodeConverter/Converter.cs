@@ -6,7 +6,8 @@ namespace MorseCodeConverter
     {
         public static bool IsMorse(string text)
         {
-            return text.Split(' ')[0].Contains(".") || text.Split(" ")[0].Contains("-");
+          string[] lines = text.Split(' ');
+            return lines[0].Contains(".") || lines[0].Contains("-");
         }
         public abstract string Convert();
     }
